@@ -1,9 +1,3 @@
-/*!
- * Start Bootstrap - Agency v3.3.7+1 (http://startbootstrap.com/template-overviews/agency)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
-
 .btn-primary.active,
 .btn-primary:active,
 .btn-xl.active,
@@ -18,13 +12,7 @@ body {
     webkit-tap-highlight-color: #fed136
 }
 .btn-primary,
-.btn-xl,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.btn-xl, h1, h2, h3, h4, h5, h6 {
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700
