@@ -26,10 +26,11 @@ html, body {
 }
 
 #map {
-	height: 600px;
+	height: 400px;
 	width: 600px;
 	margin-left:auto;
 	margin-right:auto;
+	margin-bottom: 50px;
 }
 
 iframe {
