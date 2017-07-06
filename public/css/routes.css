@@ -26,23 +26,22 @@ html, body {
 }
 
 #map {
-	height: 400px;
-	width: 600px;
+	height: 500px;
+	width: 700px;
 	margin-left:auto;
 	margin-right:auto;
 	margin-bottom: 50px;
-}
-
-iframe {
-	height: 455px;
-	width: 70%;
-	margin-top: 50px;
 }
 
 a {
 	margin-top: 50px;
 	text-align: right;
 	padding-right: 20px;
+}
+
+#map p {
+	font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: left;
 }
 
 #map_canvas {
