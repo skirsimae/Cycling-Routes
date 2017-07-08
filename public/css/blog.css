@@ -1,13 +1,18 @@
-body {
+html, body {
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 100%;
   padding: 0;
   margin: 0;
   background: url('img/veluwe.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
+}
+
+#map {
+  height: 400px;
+  width: 600px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 50px;
 }
 
 .navbar {
@@ -15,8 +20,7 @@ body {
   background-color: rgba(255,255,255,0.5);
   padding: 0;
   margin: auto;
-/*  position: fixed;
-*/  width: 100%;
+  width: 100%;
 }
 
 .navbar a {
@@ -38,7 +42,7 @@ body {
   max-width: 960px;
   height: auto;
   border-radius: 5px;
-  padding-bottom: 100px;
+  padding-bottom: 200px;
 }
 
 
@@ -50,11 +54,10 @@ body {
     background-color: #fdfcfc;
 }
 
-.footer {
-  margin-top: 100px;
-  text-align: center;
-  font-size: 80%;
+.pheading {
+  margin-right: 235px;
 }
+
 
 #background {
   position: relative;
@@ -62,48 +65,84 @@ body {
 
 #background img{
   width: 100%;
-  z-index: -1; 
-/*  position: absolute;
-*/  top: 0;
+  top: 0;
 }
 
-h1, h2 {
-  min-height: 70px;
-/*  width: 90%;
-*//*  max-width: 700px;
-*/  vertical-align: middle;
+h1{
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
   margin: 0;
   text-decoration: none;
   color: black;
-  padding-top: 50px;
+  padding-top: 80px;
+  padding-bottom: 20px;
 }
 
 p {
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 90%;
   max-width: 700px;
   text-align: left;
   margin: 0 auto;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
+  letter-spacing: 1px;
 }
 
-.image {
+.image1 {
+  height: 165px;
   float: left;
-  padding-left: 50px;
-  padding-right: 25px;
-  margin-left: 50px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 0px;
+  margin-right: 25px;
+  margin-left: 70px;
+  border-radius: 7px;
 }
 
-img.heading {
-  float: right;
+
+.image2 {
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 25px;
+  margin-left: 70px;
+  border-radius: 7px;
+  margin-top: 8px;
+}
+
+
+.image3 {
+  height: 200px;
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  margin-right: 25px;
+  margin-left: 70px;
+  border-radius: 7px;
+}
+
+.image4 {
+  height: 190px;
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  margin-right: 25px;
+  margin-left: 70px;
+  border-radius: 7px;
 }
 
 .w3-button {
-  margin-left: 30px;
-  width:100px;
+  float: right;
+  width: 110px;
+  text-align: center;
   border-radius: 5px; 
 }
 
 .footer {
   margin-bottom: 40px;
+  text-align: center;
+  font-size: 80%;
 }
+

@@ -1,4 +1,4 @@
-body {
+html, body {
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 100%;
   padding: 0;
@@ -24,13 +24,18 @@ body {
 }
 
 .main {
-  padding: 16px;
+  padding: 40px;
   text-align: center;
   padding-top: 0;
 }
 
+.main h1 {
+  padding-top: 30px;
+  font-weight: normal;
+}
+
 .main h3 {
-  padding-top: 20px;
+  padding-top: 10px;
   font-weight: normal;
 }
 
@@ -45,12 +50,11 @@ body {
 .content{
     padding-top:100px;
     margin-top:0px;
-    background-image: url("img/image.jpg");
     background-size:100%;
     background-repeat: no-repeat;
     min-height:250px;
+    background-image: url("img/image.jpg");
 }
-
 
 .footer {
   margin-top: 100px;
