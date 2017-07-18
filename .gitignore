@@ -58,3 +58,4 @@ typings/
 .env
 app.js
 blog.pug
+routes.pug
