@@ -1,0 +1,100 @@
+doctype html
+html(lang='en')
+	head
+		title Blog
+		style
+			include ../public/css/blog.css
+		link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700', rel='stylesheet', type='text/css')
+		link(rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css")
+	body
+		div(class='navbar')
+			a(class='active' href='/blog') Places
+			a(href='/routes') Routes
+			a(href='/') Home
+		div(id='background') 
+			div(class='container')
+				h1 Places to visit in Apeldoorn
+				p Apeldoorn is a quiet city in Gelderland with the population of 150 000 people. Within a short distance by bike, there are many places to see. Take a look at some of them:
+				br
+				br
+				div(id='map')
+				script.
+					function initMap() {
+						var myOptions = {
+							zoom: 12,
+							center: new google.maps.LatLng(52.227494, 5.956971),
+							mapTypeId: 'roadmap'
+						}
+
+						var map = new google.maps.Map(document.getElementById('map'), myOptions);
+						var markers = [];
+
+						var infowindow = new google.maps.InfoWindow({
+							maxWidth: 300,
+						});
+
+						var points = [
+							[52.235011,5.945987, '<img src="../img/Paleis.jpg">'],
+							[52.214037,5.927107, '<img src="../img/monkeyzoo.jpg">'],
+							[52.213774,5.926109, '<img src="../img/berg_en_bos.jpg">'],
+							[52.218933,5.961228, '<img src="../img/Oranjepark.jpg">']
+						];
+
+						for (var i = 0; i < points.length; i++) {
+							var marker = new google.maps.Marker({
+								position: new google.maps.LatLng(points[i][0], points[i][1]),
+								map: map, 
+								html: points[i][2]
+							});
+
+						var contentString = '<div id="content">'+
+							points[i][2]
+							'</div';
+						console.log(contentString);
+						makeInfoWindowEvent(map, infowindow, contentString, marker);
+						markers.push(marker);
+					};
+						function makeInfoWindowEvent(map, infowindow, contentString, marker) {
+							google.maps.event.addListener(marker, 'click', function() {
+								infowindow.setContent(this.html);
+								infowindow.open(map, this);
+							});
+						};
+					}
+				br
+				br
+				img(style="width: 30%" src="img/Paleis.jpg" alt="Het Loo" class="image1")
+				p(class="heading") <strong> 1. Paleis Het Loo </strong> 
+					a(class="w3-button w3-green" href ="https://www.paleishetloo.nl/en/#2017-07-01" target="_blank") More info
+				br
+				p(class="pheading") The palace is a state museum open for the general public, showing interiors with original furniture, objects and paintings of the House of Orange-Nassau.
+				br
+				br
+				br
+				img(style="width: 30%" src="img/monkeyzoo.jpg" alt="Apenheul" class="image2")
+				p(class="heading") <strong> 2. Apenheul </strong> 
+					a(class="w3-button w3-green" href ="https://www.apenheul.com/" target="_blank") More info
+				br
+				p(class="pheading") Apenheul is home to about 70 species of animals, 35 of which are primates. The park houses lemurs from Madagascar, monkeys from Central and South America, and monkeys and apes from Asia and Africa.
+				br
+				br
+				br
+				img(style="width: 30%" src="img/berg_en_bos.jpg" alt="Park Berg en Bos" class="image3")
+				p(class="heading") <strong> 3. Park Berg en Bos </strong> 
+					a(class="w3-button w3-green" href ="https://www.tripadvisor.com/Attraction_Review-g188567-d8018411-Reviews-Park_Berg_en_Bos-Apeldoorn_Gelderland_Province.html" target="_blank") More info
+				br
+				p(class="pheading") A nature reserve of 250 hectares, showing the characteristic of the area's plants and animals such as wild boar and red deer. When going deeper into the park, the character gradually changes from a carefully landscaped park into varied woodland. 
+				br
+				br
+				br
+				img(style="width: 30%" src="img/Oranjepark.jpg" alt="Oranjepark" class="image4")
+				p(class="heading") <strong> 4. Oranjepark </strong> 
+					a(class="w3-button w3-green" href ="https://www.tripadvisor.com/Attraction_Review-g188567-d10714941-Reviews-Oranjepark-Apeldoorn_Gelderland_Province.html" target="_blank") More info
+				br
+				p(class="pheading") Need a place to relax? Oranjepark is a historical park with old trees and music stand.
+		div(class='footer')
+			span.copyright Copyright © Cycling in Apeldoorn 2017
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+		script(src="http://www.google-analytics.com/urchin.js" type="text/javascript")
+		script(src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js")
+		script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCks71_vzjMvUuatIZj2VaNKVvuB7bFyqc&signed_in=true&callback=initMap")
